@@ -104,7 +104,8 @@ class _HomePageState extends State<HomePage> {
   void addBandToList( String name ){
     print(name);
     if( name.length > 1){
-      //TODO: Podemos agregar
+      this.bands.add(new Band(id: DateTime.now().toString(), name: name));
+      setState(() {});
     }
 
     Navigator.pop(context);
